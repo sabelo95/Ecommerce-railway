@@ -19,7 +19,7 @@ import swaggerUi from 'swagger-ui-express'
 
 
 
-const PORT = 8080;
+const PORT = config.PORT;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -56,7 +56,7 @@ app.use(sessions(
           }
       )
   }
-)) 
+))
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
