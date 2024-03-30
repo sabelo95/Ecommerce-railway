@@ -1,11 +1,11 @@
-/* import dotenv from 'dotenv'
+ import dotenv from 'dotenv'
 
 dotenv.config(
     {
         override: true,
         path:"./src/.env"
     }
-) */
+) 
 
 export const config={
     MONGO_URL:process.env.MONGO_URL, 
