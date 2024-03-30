@@ -44,7 +44,7 @@ const specs=swaggerJsdoc(options)
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs))
 
 
-app.use(sessions(
+/* app.use(sessions(
   {
       secret:config.SecretKey,
       resave: true, saveUninitialized: true,
@@ -56,7 +56,7 @@ app.use(sessions(
           }
       )
   }
-))
+)) */
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
