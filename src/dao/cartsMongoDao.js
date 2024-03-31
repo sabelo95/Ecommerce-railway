@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 import { CartModel } from "../dao/models/carts.model.js";
 import { logger } from "../utils/loggers.js";
 
-try {
+/* try {
     await mongoose.connect(
       "mongodb+srv://santiagoberriolopez:mecanica95@cluster0.d1pj6rg.mongodb.net/?retryWrites=true&w=majority&dbName=ecommerce"
     );
     logger.info("DB Online");
   } catch (error) {
     logger.error(error);
-  }
+  } */
 
 
   export class cartMongoDAO{

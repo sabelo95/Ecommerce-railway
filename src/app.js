@@ -16,8 +16,16 @@ import { middLogg } from "./utils/loggers.js";
 import { logger } from "./utils/loggers.js";
 import swaggerJsdoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
+import mongoose from "mongoose";
 
-
+try {
+  await mongoose.connect(
+    "mongodb+srv://santiagoberriolopez:mecanica95@cluster0.d1pj6rg.mongodb.net/?retryWrites=true&w=majority&dbName=ecommerce"
+  );
+  logger.info("DB Online");
+} catch (error) {
+  logger.error(error)
+}
 
 const PORT = config.PORT;
 
