@@ -54,7 +54,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs))
 
 app.use(sessions(
   {
-      secret:config.SecretKey,
+      secret:config.SECRETKEY,
       resave: true, saveUninitialized: true,
       store: mongoStore.create(
           {

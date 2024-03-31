@@ -13,7 +13,7 @@ export const config={
     CALLBACK_URL:process.env.CALLBACK_URL,
     CLIENT_ID:process.env.CLIENT_ID,
     CLIENT_SECRET:process.env.CLIENTSECRET,
-    SecretKey:process.env.SECRETKEY,
+    SECRETKEY:process.env.SECRETKEY,
     MODE:process.env.MODE||"production",
     PORT:process.env.PORT
 
