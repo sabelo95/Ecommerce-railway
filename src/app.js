@@ -49,7 +49,7 @@ app.use(sessions({
   resave: true,
   saveUninitialized: true,
   store: mongoStore.create({
-      mongoUrl: "mongodb://santiagoberriolopez:mecanica95@cluster0.d1pj6rg.mongodb.net/ecommerce",
+      mongoUrl: "mongodb+srv://santiagoberriolopez:mecanica95@cluster0.d1pj6rg.mongodb.net/?retryWrites=true&w=majority&dbName=ecommerce",
       mongoOptions: { dbName: "ecommerce" },
       ttl: 3600
   })
