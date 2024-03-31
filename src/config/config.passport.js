@@ -97,7 +97,7 @@ export const inicializarPassport=()=>{
 
     passport.use('github', new github.Strategy(
         {
-            clientID: config.CLIENT_ID, 
+            clientID: "Iv1.47a3cf663b9943dc", 
             clientSecret: config.CLIENT_SECRET, 
             callbackURL: config.CALLBACK_URL, 
         },

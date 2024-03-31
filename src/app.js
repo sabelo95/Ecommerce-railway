@@ -44,19 +44,16 @@ const specs=swaggerJsdoc(options)
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs))
 
 
-app.use(sessions(
-  {
-      secret:config.SecretKey,
-      resave: true, saveUninitialized: true,
-      store: mongoStore.create(
-          {
-              mongoUrl:config.MONGO_URL,
-              mongoOptions:{dbName:config.DBNAME},
-              ttl:3600
-          }
-      )
-  }
-))
+app.use(sessions({
+  secret: "codercoder123",
+  resave: true,
+  saveUninitialized: true,
+  store: mongoStore.create({
+      mongoUrl: "mongodb://santiagoberriolopez:mecanica95@cluster0.d1pj6rg.mongodb.net/ecommerce",
+      mongoOptions: { dbName: "ecommerce" },
+      ttl: 3600
+  })
+}));
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
